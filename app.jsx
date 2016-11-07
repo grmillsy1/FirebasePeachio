@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import InviteContainer from './scr/containers/invite_container';
+import store from './scr/store/store';
+import "./stylesheets/main.css"
 
-ReactDOM.render(
-  <Provider>
-    <h1> hello </h1>
+
+const main = (
+  <Provider store={store}>
+    <InviteContainer />
   </Provider>
-  , document.getElementById('container'));
+)
+
+ReactDOM.render(main, document.getElementById('container'));
